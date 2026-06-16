@@ -1,0 +1,30 @@
+{
+  "name": "bunsible",
+  "version": "0.1.0",
+  "description": "Bun-native TypeScript-DSL automation for SSH hosts. Minimal Ansible.",
+  "keywords": ["bun", "ansible", "automation", "ssh", "devops", "playbook"],
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": "./index.ts",
+    "./modules/shell": "./src/modules/shell.ts",
+    "./modules/copy": "./src/modules/copy.ts",
+    "./modules/template": "./src/modules/template.ts",
+    "./modules/file": "./src/modules/file.ts",
+    "./modules/package": "./src/modules/package.ts",
+    "./modules/service": "./src/modules/service.ts"
+  },
+  "bin": {
+    "bunsible": "./src/cli.ts"
+  },
+  "files": ["src", "index.ts", "README.md", "LICENSE"],
+  "engines": {
+    "bun": ">=1.3.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
